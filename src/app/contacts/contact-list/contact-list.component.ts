@@ -4,7 +4,7 @@ import { ContactService } from '../contact.service';
 import { ContactDetailsComponent } from '../contact-details/contact-details.component';
 
 @Component({
-  selector: 'contact-list',
+  selector: 'app-contact-list',
   templateUrl: './contact-list.component.html',
   styleUrls: ['./contact-list.component.css'],
   providers: [ContactService]
@@ -12,7 +12,7 @@ import { ContactDetailsComponent } from '../contact-details/contact-details.comp
 
 export class ContactListComponent implements OnInit {
 
-  contacts: Contact[]
+  contacts: Contact[];
   selectedContact: Contact;
 
   constructor(private contactService: ContactService) { }
@@ -26,7 +26,7 @@ export class ContactListComponent implements OnInit {
             contact.phone = {
               mobile: '',
               work: ''
-            }
+            };
           }
           return contact;
         });
